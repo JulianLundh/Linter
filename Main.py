@@ -5,6 +5,7 @@
 
 import re
 from Repo_path import RepoPath
+from Folder_Walker import FolderWalker
 
 
 def main():
