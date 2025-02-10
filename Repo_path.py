@@ -28,7 +28,7 @@ class RepoPath:
         destination = os.path.expanduser(self.path)
         if os.path.exists(destination):
             print(f"Found path {destination}")
-            return destination  # Viktigt att returnera här!
+            return destination
 
     def download_To_local(self, FolderName, default_val=False):
         destination = os.path.expanduser(f"~/downloads{FolderName}")
