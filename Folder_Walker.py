@@ -7,12 +7,23 @@ class FolderWalker:
 
     def walker(self):
         gitignore = "does not exist"
-        license = False
-        GitHub_Work = False
+        license = "does not exist"
+        GitHub_Work = "does not exist"
         for path, dirs, files in os.walk(self.path, topdown=False):
             for names in files:
-                if os.path.basename(names) == ".gitignore":
-                    gitignore = "exist"
-                print(os.path.basename(names))
+                filenames = os.path.basename(names)
 
-        print("The .gitignore ", gitignore)
+                if filenames == ".gitignore":
+                    gitignore = "exist"
+
+                if filenames.lower() == "license" or filenames.lower().startswith(
+                    "license."
+                ):
+                    license = "exist"
+
+            if ".github/workflows" in path:
+                GitHub_Work = "exist"
+
+        print("Gitignore file: ", gitignore)
+        print("license file: ", license)
+        print("GitHub Workflow file: ", GitHub_Work)
