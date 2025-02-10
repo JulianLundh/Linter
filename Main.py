@@ -15,7 +15,7 @@ def main():
     checkUrl = repo.folder_or_url()  # call calls verify_url
     print(checkUrl)
 
-    if checkUrl is not None or "Error":
+    if checkUrl is not None or not "Error":
         walk = FolderWalker(checkUrl)
         walk.walker()
 
@@ -34,7 +34,8 @@ def testRepoPath():
         "https://www.google.com",
         "/Users/julian/Downloads/Tyrrrz/YoutubeDownloader",
         "/finnsEj/",
-        "~Downloads/Tyrrrz/YoutubeDownloader",
+        "~/Downloads/Tyrrrz/YoutubeDownloader",
+        "https://github.com/JulianLundh/Linter"
     ]
     AmountOrErrors = 0
     for i in TestUrlFolders:

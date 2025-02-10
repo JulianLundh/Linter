@@ -6,6 +6,13 @@ class FolderWalker:
         self.path = path
 
     def walker(self):
-        for path, dirs, files in os.walk(".", topdown=False):
+        gitignore = "does not exist"
+        license = False
+        GitHub_Work = False
+        for path, dirs, files in os.walk(self.path, topdown=False):
             for names in files:
-                print(os.path.join(path, names))
+                if os.path.basename(names) == ".gitignore":
+                    gitignore = "exist"
+                print(os.path.basename(names))
+
+        print("The .gitignore ", gitignore)

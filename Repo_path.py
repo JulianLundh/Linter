@@ -23,7 +23,8 @@ class RepoPath:
                     ).strip()
                 if val == "y" or val == "Y" or val == "" or default_val:
                     FolderName = urlCheck.group(1)
-                    self.download_To_local(FolderName, default_val)
+                    destination = self.download_To_local(FolderName, default_val)
+                    return destination
 
         destination = os.path.expanduser(self.path)
         if os.path.exists(destination):
@@ -49,3 +50,4 @@ class RepoPath:
 
         os.system(f"git clone {self.path} {destination}")
         print(f"Repository cloned to {destination}")
+        return destination
