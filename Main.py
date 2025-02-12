@@ -17,7 +17,7 @@ def main():
     val = input("Enter Github repo URL or GitHub folder URL: ").strip()
 
     repo = RepoPath(val)  # Create instance of class RepoPath with the provided URL
-    checkUrl = repo.folder_or_url()  # call calls verify_url
+    checkUrl = repo.folder_or_url()  # call  verify_url
     # print(checkUrl)
 
     if checkUrl is not None and checkUrl != "Error":
