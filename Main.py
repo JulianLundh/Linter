@@ -1,5 +1,5 @@
-# pip install pygithub, Folder
-# pip install gitpython, Repo
+#!/usr/bin/env python3
+# pip install pygithub
 # pip required
 
 
