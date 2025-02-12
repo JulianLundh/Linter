@@ -24,6 +24,6 @@ class FolderWalker:
             if ".github/workflows" in path:
                 GitHub_Work = "exist"
 
-        print("Gitignore file: ", gitignore)
-        print("license file: ", license)
-        print("GitHub Workflow file: ", GitHub_Work)
+        print("Gitignore file:", gitignore)
+        print("license file:", license)
+        print("GitHub Workflow file:", GitHub_Work)

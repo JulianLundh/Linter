@@ -30,6 +30,8 @@ class RepoPath:
         if os.path.exists(destination):
             print(f"Found path {destination}")
             return destination
+        print("The URL is not a GitHub repository or the local folder does not exist.")
+        return "Error"
 
     def download_To_local(self, FolderName, default_val=False):
         destination = os.path.expanduser(f"~/downloads{FolderName}")
