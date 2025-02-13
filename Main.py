@@ -11,9 +11,8 @@ from Folder_Walker import FolderWalker
 def main():
     print("Enter folder or URL")
     print("Exampel, https://github.com/Tyrrrz/YoutubeDownloader")
-    print(
-        "For folder, ~/Downloads/Tyrrrz/YoutubeDownloade, or /Users/julian/Downloads/Tyrrrz/YoutubeDownloader"
-    )
+    print("For folder, ~/Downloads/Tyrrrz/YoutubeDownloader")
+    print("or full path, replace parallels with username, /home/parallels/Downloads/Tyrrrz/YoutubeDownloader")
     val = input("Enter Github repo URL or GitHub folder URL: ").strip()
 
     repo = RepoPath(val)  # Create instance of class RepoPath with the provided URL

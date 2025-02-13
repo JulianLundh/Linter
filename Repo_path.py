@@ -34,7 +34,7 @@ class RepoPath:
         return "Error"
 
     def download_To_local(self, FolderName, default_val=False):
-        destination = os.path.expanduser(f"~/downloads{FolderName}")
+        destination = os.path.expanduser(f"~/Downloads{FolderName}")
         if os.path.exists(destination):
             if default_val:
                 valRemove = default_val

@@ -6,3 +6,6 @@ __pycache__/
 *.pyo
 *.log
 .DS_Store
+main.build/
+main.dist/
+main.onefile-build/
