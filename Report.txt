@@ -1,0 +1,68 @@
+
+╔══════════════════════════════════════════════════════════════════╗
+║            New repo search                                       ║
+╠══════════════════════════════════════════════════════════════════╣
+║ Path: ~/Library/CloudStorage/OneDrive-Privat/Python/Linter
+╚══════════════════════════════════════════════════════════════════╝
+🟢 .gitignore
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/.gitignore
+🔴 license does not exist
+🟢 README.md
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/README.md
+🔴 Workflows folder does not exist
+🔴 test: No files found or empty 'test' folder at /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter
+🔴 Credentials found!
+
+╔══════════════════════════════════════════════════════════════════╗
+║            Total Git Commits:  15
+╚══════════════════════════════════════════════════════════════════╝
+    14	julllleee
+     1	JulianLundh
+
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║            New repo search                                       ║
+╠══════════════════════════════════════════════════════════════════╣
+║ Path: ~/Library/CloudStorage/OneDrive-Privat/Python/Linter
+╚══════════════════════════════════════════════════════════════════╝
+🟢 .gitignore
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/.gitignore
+🔴 license does not exist
+🟢 README.md
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/README.md
+🔴 Workflows folder does not exist
+🔴 test: No files found or empty 'test' folder at /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter
+🔴 Credentials found!
+
+╔══════════════════════════════════════════════════════════════════╗
+║            Total Git Commits:  15
+╚══════════════════════════════════════════════════════════════════╝
+    14	julllleee
+     1	JulianLundh
+
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║            New repo search                                       ║
+╠══════════════════════════════════════════════════════════════════╣
+║ Path: ~/Library/CloudStorage/OneDrive-Privat/Python/Linter
+╚══════════════════════════════════════════════════════════════════╝
+🟢 .gitignore
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/.gitignore
+🔴 license does not exist
+🟢 README.md
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/README.md
+🔴 Workflows folder does not exist
+🟢 test: Found 1 files and 1 folders containing 'test'
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/testing/testing.txt
+       - /Users/julian/Library/CloudStorage/OneDrive-Privat/Python/Linter/testing
+🔴 Credentials found!
+
+╔══════════════════════════════════════════════════════════════════╗
+║            Total Git Commits:  15
+╚══════════════════════════════════════════════════════════════════╝
+    14	julllleee
+     1	JulianLundh
+
+

@@ -1,0 +1,10 @@
+{
+    "_comment": "Configuration settings for repository checks.",
+    "repo_folder": "~/Downloads/",
+    "Allow_GitIgnore_Fail": false,
+    "Allow_license_Fail": false,
+    "Allow_README_Fail": false,
+    "Allow_workflows_Fail": false,
+    "Allow_test_Fail": false,
+    "Allow_Truffle_Fail": false
+}

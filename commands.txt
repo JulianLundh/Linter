@@ -1,0 +1,10 @@
+~/Downloads/TestFolder/EmptyFolder
+~/Downloads/TestFolder/EmptyContent
+~/Downloads/TestFolder/CorrectFilesInFolder
+/Users/julian/Downloads/TestFolder/CorrectFilesOutsideFolder
+/Users/julian/Downloads/TestFolder/OneReadMeEmpty-OneCorrect
+/Users/julian/Downloads/TestFolder/FilesAndFolderCalledTesting
+https://github.com/Tyrrrz/YoutubeDownloader
+https://github.com/trufflesecurity/test_keys
+
+

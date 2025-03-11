@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 # pip install pygithub
 # pip required
+# pip install pathspec, nej?
+# pip install gitignore-parser
 
 
 import re
 from Repo_path import RepoPath
 from Folder_Walker import FolderWalker
-from Reporter import Report
+from TruffleHog_Scanner import TruffleHog
+from git_commits import gitCommit
+import json
+
+with open("config.json", "r") as file:
+    config = json.load(file)
+
+Allow_Truffle_Fail = config.get("Allow_Truffle_Fail", False)
 
 
 def main():
@@ -17,29 +26,40 @@ def main():
     print(
         "or full path, replace parallels with username, /home/parallels/Downloads/Tyrrrz/YoutubeDownloader"
     )
+    AllowFailTruffle = locals().get("AllowFailTruffle", "0")
+    AllowFailRepo = locals().get("AllowFailRepo", "0")
     while x == 1:
-        print("Write Exit to stop")
-        val = input("Enter Github repo URL or GitHub folder URL: ").strip()
+        Ran = False
+        hogRun = False
+        val = input("Enter URL or path,Exit to stop: ").strip()
+        if val == "exit":
+            if any(x == "1" for x in [AllowFailTruffle, AllowFailRepo]):
+                print("1")
+                return "1"
+            else:
+                print("0")
+                return "0"
 
-        repo = RepoPath(val)  # Create instance of class RepoPath with the provided URL
-        checkUrl = repo.folder_or_url()  # call  verify_url
-        print(checkUrl)
+        repo = RepoPath(val)
+        checkUrl = repo.folder_or_url()
 
         if checkUrl is not None and checkUrl != "Error":
             walk = FolderWalker(checkUrl)
-            walk.walker()
+            AllowFailRepo = walk.walker()
+            Ran = True
 
-        if val == "exit":
-            break
+        if Ran:
+            hog = TruffleHog(checkUrl)
+            AllowFailTruffle = hog.run_scan_hog(Allow_Truffle_Fail)
+            Ran = False
+            hogRun = True
+
+        if hogRun:
+            git_report = gitCommit(checkUrl)
+            git_report.rankCommits()
 
 
-#        "https://github.com/Tyrrrz/YoutubeDownloader",
-#        "https://github.com/Tyrrrz",
-#        "https://www.google.com",
-#        "/Users/julian/Downloads/Tyrrrz/YoutubeDownloader",
-#        "/finnsEj/",
-#        "~/Downloads/Tyrrrz/YoutubeDownloader",
-#        "https://github.com/JulianLundh/Linter"
+# Main function to handle user input, run repo analysis, and generate reports.
 
 
 if __name__ == "__main__":
