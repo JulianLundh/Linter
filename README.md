@@ -1,17 +1,11 @@
 # Linter
 
-## How to Run
-Before running the program, follow these steps:
-
-1. Run the file called `Main.py`.
-2. Follow the on-screen instructions.
-
 ## Usage
 
 - Run `Main.py` and enter either a **GitHub repository URL** or a **local folder path**.
 - The script will **clone** the repository into the specified download folder *(default: `~/Downloads/`)*.
 - The script will **analyze** the content and print a summary of its findings in the terminal.
-- A **report** will be generated for further inspection.
+- A **Report.txt** will be generated for further inspection.
 - Upon completion, the script returns an **exit code**:
 
 | Exit Code | Meaning |
