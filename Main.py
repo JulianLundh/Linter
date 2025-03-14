@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# pip install pygithub
-# pip required
-# pip install pathspec, nej?
-# pip install gitignore-parser
-
-
 import re
 from Repo_path import RepoPath
 from Folder_Walker import FolderWalker
@@ -33,11 +26,11 @@ def main():
         hogRun = False
         val = input("Enter URL or path,Exit to stop: ").strip()
         if val == "exit":
-            if any(x == "1" for x in [AllowFailTruffle, AllowFailRepo]):
-                print("1")
+            if any(y == "1" for y in [AllowFailTruffle, AllowFailRepo]):
+                print("Exit code: 1")
                 return "1"
             else:
-                print("0")
+                print("Exit code: 0")
                 return "0"
 
         repo = RepoPath(val)

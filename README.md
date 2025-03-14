@@ -3,58 +3,65 @@
 ## How to Run
 Before running the program, follow these steps:
 
-1. Make the file executable:
-   ```sh
-   chmod +x main.bin
-    ```
-2: Run the binary in the terminal:
-   ```sh
-    ./main.bin
-   ```
+1. Run the file called `Main.py`.
+2. Follow the on-screen instructions.
 
 ## Usage
 
-Once the software is running, you can enter a GitHub repository URL or a local folder path:
+- Run `Main.py` and enter either a **GitHub repository URL** or a **local folder path**.
+- The script will **clone** the repository into the specified download folder *(default: `~/Downloads/`)*.
+- The script will **analyze** the content and print a summary of its findings in the terminal.
+- A **report** will be generated for further inspection.
+- Upon completion, the script returns an **exit code**:
 
-For a GitHub repository:
-  https://github.com/Tyrrrz/YoutubeDownloader
-For a local folder:
-  ~/Downloads/Tyrrrz/YoutubeDownloader
-For a full absolute path:
-  /home/parallels/Downloads/Tyrrrz/YoutubeDownloader
-  (Replace parallels with your actual username if needed.)
+| Exit Code | Meaning |
+|-----------|----------------|
+| `1` | Errors were found. |
+| `0` | No errors detected. |
+
+### Example Valid Paths
+| Type               | Example |
+|------------------|--------------------------------|
+| **Full URL** | `https://github.com/JulianLundh/Linter` |
+| **Short URL** | `github.com/JulianLundh/Linter` |
+| **Absolute Path** | `~/Downloads/JulianLundh/Linter` |
+| **Full Path** | `/Users/julian/Downloads/JulianLundh/Linter` |
 
 ## Requirements
-
 To run this software, you need:
 
-    Python 3
-    pip (Python package manager)
-    GitPython (Python library for Git integration)
-    Git (command-line tool for Git operations)
+- Python 3
+- pip (Python package manager)
+- Git
+- GitPython
+- Trufflehog
+- Gitignore Parser
 
 ## Installation Instructions
-  1: Install Python & pip
-  If you don’t have Python installed, install it with:
-  ```sh
-    sudo apt update
-    sudo apt install python3 python3-pip -y
+
+### 1: Install Python & pip
+If Python is not installed, install it with:
+
+**Ubuntu/Debian:**
+```sh
+sudo apt update && sudo apt install python3-pip -y
 ```
 
-  2: Install Git
+### 2: Install Git
 ```sh
-    sudo apt install git -y
+sudo apt install git -y
 ```
 
-  3: Install GitPython
+### 3: Install Required Python Packages
 ```sh
-    pip install gitpython
+pip install gitpython trufflehog gitignore_parser
 ```
+
+## Configuration
+
+- The **`config.json`** file allows you to specify which errors are permitted.
+- It also lets you select the **download directory** where repositories will be cloned.
+- If a specific issue is allowed, it will still be reported, but the script will return **exit code 0** instead of `1`.
 
 ## FAQ
-  If the program doesn't start, make sure you have the necessary permissions to run main.bin
-  
-  If running from a shared folder (e.g., macOS Parallels), move the file to a local Linux directory before executing.
-
-  
-
+- If running from a shared folder (e.g., macOS Parallels), move the file to a local Linux directory before executing.
