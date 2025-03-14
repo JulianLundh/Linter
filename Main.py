@@ -14,11 +14,8 @@ Allow_Truffle_Fail = config.get("Allow_Truffle_Fail", False)
 def main():
     x = 1
     print("Enter folder or URL")
-    print("Exampel, https://github.com/Tyrrrz/YoutubeDownloader")
-    print("For folder, ~/Downloads/Tyrrrz/YoutubeDownloader")
-    print(
-        "or full path, replace parallels with username, /home/parallels/Downloads/Tyrrrz/YoutubeDownloader"
-    )
+    print("Exampel, https://github.com/JulianLundh/Linter")
+    print("Absolute/Full path to folder, ~/Downloads/JulianLundh/Linter")
     AllowFailTruffle = locals().get("AllowFailTruffle", "0")
     AllowFailRepo = locals().get("AllowFailRepo", "0")
     while x == 1:

@@ -1,1 +1,6 @@
-gitpython
+Python 3
+pip
+Git
+GitPython
+Trufflehog
+Gitignore Parser

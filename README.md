@@ -2,7 +2,7 @@
 
 ## Usage
 
-- Run `Main.py` and enter either a **GitHub repository URL** or a **local folder path**.
+- Run the script with `python3 Main.py` and enter either a **GitHub repository URL** or a **local folder path**.
 - The script will **clone** the repository into the specified download folder *(default: `~/Downloads/`)*.
 - The script will **analyze** the content and print a summary of its findings in the terminal.
 - A **Report.txt** will be generated for further inspection.

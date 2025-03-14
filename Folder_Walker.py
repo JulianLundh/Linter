@@ -4,9 +4,6 @@ import textwrap
 import json
 import gitignore_parser
 
-# https://stackoverflow.com/questions/25675352/how-to-check-if-a-directory-contains-files-using-python-3
-# Check if path is empty
-
 
 with open("config.json", "r") as file:
     config = json.load(file)
